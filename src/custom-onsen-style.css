@@ -20,3 +20,7 @@
 .back-button__icon {
   fill: #ff9100;
 }
+
+*:checked + .tabbar__button {
+  color: #ff9100;
+}
