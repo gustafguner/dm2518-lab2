@@ -6,14 +6,14 @@ interface Props {
   navigator: any;
 }
 
-const Details: React.FC<Props> = ({ navigator }) => (
+const About: React.FC<Props> = ({ navigator }) => (
   <Ons.Page
     renderToolbar={() => (
       <Ons.Toolbar>
         <div className="left">
           <Ons.BackButton>Back</Ons.BackButton>
         </div>
-        <div className="center">details</div>
+        <div className="center">About</div>
       </Ons.Toolbar>
     )}
   >
@@ -21,4 +21,4 @@ const Details: React.FC<Props> = ({ navigator }) => (
   </Ons.Page>
 );
 
-export default Details;
+export default About;

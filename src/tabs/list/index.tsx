@@ -1,19 +1,22 @@
 import * as React from "react";
 import * as Ons from "react-onsenui";
-import Details from "./details";
+import ChocolateCakeDetails from "./chocolate-cake-details";
+import CarrotCakeDetails from "./carrot-cake-details";
+import RedVelvetCakeDetails from "./red-velvet-cake-details";
+import About from "./about";
 
 const list = [
   {
-    name: "Gustaf"
+    name: "Chocolate cake",
+    component: ChocolateCakeDetails
   },
   {
-    name: "Jakob"
+    name: "Carrot cake",
+    component: CarrotCakeDetails
   },
   {
-    name: "Lorem"
-  },
-  {
-    name: "About"
+    name: "Red velvet cake",
+    component: RedVelvetCakeDetails
   }
 ];
 
@@ -27,13 +30,21 @@ const List: React.FC<ListComponentProps> = ({ navigator }) => (
       <Ons.Card key={item.name}>
         <span
           onClick={() => {
-            navigator.pushPage({ component: Details });
+            navigator.pushPage({ component: item.component });
           }}
         >
           {item.name}
         </span>
       </Ons.Card>
     ))}
+
+    <Ons.Button
+      onClick={() => {
+        navigator.pushPage({ component: About });
+      }}
+    >
+      About
+    </Ons.Button>
   </>
 );
 
