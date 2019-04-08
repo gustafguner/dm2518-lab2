@@ -22,7 +22,7 @@ interface ListComponentProps {
 }
 
 const List: React.FC<ListComponentProps> = ({ navigator }) => (
-  <Ons.Page>
+  <>
     {list.map(item => (
       <Ons.Card key={item.name}>
         <span
@@ -34,7 +34,7 @@ const List: React.FC<ListComponentProps> = ({ navigator }) => (
         </span>
       </Ons.Card>
     ))}
-  </Ons.Page>
+  </>
 );
 
 export default List;

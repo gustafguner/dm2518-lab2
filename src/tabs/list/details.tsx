@@ -7,14 +7,17 @@ interface Props {
 }
 
 const Details: React.FC<Props> = ({ navigator }) => (
-  <Ons.Page>
-    <Ons.Button
-      onClick={() => {
-        navigator.popPage();
-      }}
-    >
-      :-)
-    </Ons.Button>
+  <Ons.Page
+    renderToolbar={() => (
+      <Ons.Toolbar>
+        <div className="left">
+          <Ons.BackButton>Back</Ons.BackButton>
+        </div>
+        <div className="center">details</div>
+      </Ons.Toolbar>
+    )}
+  >
+    Details
   </Ons.Page>
 );
 
