@@ -6,19 +6,40 @@ import "onsenui/css/onsen-css-components.css";
 
 import tabs, { TabPage } from "./tabs";
 
-const renderTabs = () =>
-  tabs.map(tab => ({
-    content: (
-      <TabPage
-        key={tab.title}
-        title={tab.title}
-        id={tab.id}
-        component={tab.component}
-      />
-    ),
-    tab: <Ons.Tab key={tab.title} label={tab.title} />
-  }));
+interface TabRootProps {
+  navigator: any;
+}
 
-const App = () => <Ons.Tabbar index={0} renderTabs={renderTabs} />;
+const TabRoot: React.FC<TabRootProps> = ({ navigator }) => (
+  <Ons.Tabbar
+    index={0}
+    renderTabs={() =>
+      tabs.map(tab => ({
+        content: (
+          <TabPage
+            key={tab.title}
+            title={tab.title}
+            id={tab.id}
+            navigator={navigator}
+            component={tab.component}
+          />
+        ),
+        tab: <Ons.Tab key={tab.title} label={tab.title} />
+      }))
+    }
+  />
+);
+
+const App = () => (
+  <Ons.Navigator
+    initialRoute={{ component: TabRoot }}
+    renderPage={(route, navigator) => {
+      const props = route.props || {};
+      props.navigator = navigator;
+
+      return React.createElement(route.component, props);
+    }}
+  />
+);
 
 export default App;

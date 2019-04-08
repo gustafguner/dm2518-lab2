@@ -1,8 +1,6 @@
 import * as React from "react";
-import * as ons from "onsenui";
 import * as Ons from "react-onsenui";
-import { PageProps } from "./types";
-import Details from "./Details";
+import Details from "./details";
 
 const list = [
   {
@@ -19,15 +17,12 @@ const list = [
   }
 ];
 
-const Home: React.FC<PageProps> = ({ navigator }) => (
-  <Ons.Page
-    id="list"
-    renderToolbar={() => (
-      <Ons.Toolbar>
-        <div className="center">Home</div>
-      </Ons.Toolbar>
-    )}
-  >
+interface ListComponentProps {
+  navigator: any;
+}
+
+const List: React.FC<ListComponentProps> = ({ navigator }) => (
+  <Ons.Page>
     {list.map(item => (
       <Ons.Card key={item.name}>
         <span
@@ -42,4 +37,4 @@ const Home: React.FC<PageProps> = ({ navigator }) => (
   </Ons.Page>
 );
 
-export default Home;
+export default List;

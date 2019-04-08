@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as Ons from "react-onsenui";
 
-const AboutTab = () => <p>About</p>;
+const About = () => <p>About</p>;
 
-export default AboutTab;
+export default About;
