@@ -1,0 +1,22 @@
+.page {
+  color: #ffffff;
+}
+
+.tabbar,
+.toolbar,
+.card {
+  background: #353535;
+}
+
+.page__background {
+  background: #202020;
+}
+
+.back-button,
+.toolbar__title {
+  color: #ff9100;
+}
+
+.back-button__icon {
+  fill: #ff9100;
+}

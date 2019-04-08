@@ -34,33 +34,39 @@ interface Tab {
   title: string;
   id: string;
   component: any;
+  icon: string;
 }
 
 const tabs: Tab[] = [
   {
     title: "About",
     id: "about",
-    component: About
+    component: About,
+    icon: "md-pin-help"
   },
   {
     title: "Chocolate cake",
     id: "chocolate-cake",
-    component: ChocolateCake
+    component: ChocolateCake,
+    icon: "md-pizza"
   },
   {
     title: "Carrot cake",
     id: "carrot-cake",
-    component: CarrrotCake
+    component: CarrrotCake,
+    icon: "md-pizza"
   },
   {
     title: "Red velvet cake",
     id: "red-velvet-cake",
-    component: RedVelvetCake
+    component: RedVelvetCake,
+    icon: "md-pizza"
   },
   {
     title: "List",
     id: "list",
-    component: List
+    component: List,
+    icon: "md-filter-list"
   }
 ];
 

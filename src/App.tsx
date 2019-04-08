@@ -4,6 +4,8 @@ import * as Ons from "react-onsenui";
 import "onsenui/css/onsenui.css";
 import "onsenui/css/onsen-css-components.css";
 
+import "./custom-onsen-style.css";
+
 import tabs, { TabPage } from "./tabs";
 
 interface TabRootProps {
@@ -25,7 +27,7 @@ const TabRoot: React.FC<TabRootProps> = ({ navigator }) => (
               component={tab.component}
             />
           ),
-          tab: <Ons.Tab key={tab.title} label={tab.title} />
+          tab: <Ons.Tab key={tab.title} label={tab.title} icon={tab.icon} />
         }))
       }
     />
