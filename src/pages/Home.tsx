@@ -10,6 +10,12 @@ const list = [
   },
   {
     name: "Jakob"
+  },
+  {
+    name: "Lorem"
+  },
+  {
+    name: "About"
   }
 ];
 
