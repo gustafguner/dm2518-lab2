@@ -7,8 +7,11 @@
     "@types/node": "11.13.0",
     "@types/react": "16.8.13",
     "@types/react-dom": "16.8.3",
+    "babel-loader": "^8.0.5",
+    "onsenui": "^2.10.8",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-onsenui": "^1.11.2",
     "react-scripts": "2.1.8",
     "typescript": "3.4.2"
   },
@@ -26,5 +29,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@types/onsenui": "^2.0.0",
+    "@types/react-onsenui": "^2.9.8"
+  }
 }

@@ -1,28 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "onsenui/css/onsenui.css";
+import "onsenui/css/onsen-css-components.css";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+import React, { Component } from "react";
+import "./App.css";
+
+import * as ons from "onsenui";
+import * as Ons from "react-onsenui";
+
+const handleClick = () => {
+  ons.notification.alert("Hello world!");
+};
+
+const App = () => (
+  <Ons.Page>
+    <Ons.Button
+      onClick={() => {
+        handleClick();
+      }}
+    >
+      Tap me!
+    </Ons.Button>
+  </Ons.Page>
+);
 
 export default App;
