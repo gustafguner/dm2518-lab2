@@ -3,11 +3,13 @@ import * as Ons from "react-onsenui";
 
 const About = () => (
   <p>
-    Onsen React by Jakob and Gustaf <br />
+   
     <img
-      src="https://www.w3schools.com/images/w3schools_green.jpg"
-      alt="W3Schools.com"
+      src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+      width="90%"
+      alt="Partayy"
     />
+     Onsen React by Jakob and Gustaf <br />
   </p>
 );
 

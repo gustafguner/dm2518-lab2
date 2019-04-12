@@ -24,3 +24,15 @@
 *:checked + .tabbar__button {
   color: #ff9100;
 }
+
+.button--large {
+  background-color: #f442bf;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 36px;
+  padding: 4px 12px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #ff9100;
+}

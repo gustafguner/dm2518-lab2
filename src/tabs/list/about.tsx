@@ -17,7 +17,16 @@ const About: React.FC<Props> = ({ navigator }) => (
       </Ons.Toolbar>
     )}
   >
-    Details
+   <p>
+   
+   <img
+     src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+     width="90%"
+     alt="Partayy"
+   />
+    Onsen React by Jakob and Gustaf <br />
+ </p>
+
   </Ons.Page>
 );
 

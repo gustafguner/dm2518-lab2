@@ -26,19 +26,23 @@ interface ListComponentProps {
 
 const List: React.FC<ListComponentProps> = ({ navigator }) => (
   <>
-    {list.map(item => (
-      <Ons.Card key={item.name}>
-        <span
+   <Ons.List>
+   {list.map(item => (
+     <Ons.ListItem tappable = {true}>
+      <span
           onClick={() => {
             navigator.pushPage({ component: item.component });
           }}
         >
           {item.name}
         </span>
-      </Ons.Card>
+     </Ons.ListItem>
+        
     ))}
+   </Ons.List>
+  
 
-    <Ons.Button
+    <Ons.Button  modifier="large"
       onClick={() => {
         navigator.pushPage({ component: About });
       }}
